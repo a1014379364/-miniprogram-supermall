@@ -1,0 +1,5 @@
+<!--components/content/BackTop/BackTop.wxml-->
+<view bind:tap="backTop">
+  <image src="/assets/img/common/pullup.png" class="image"></image>
+</view>
+

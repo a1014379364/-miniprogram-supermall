@@ -1,0 +1,7 @@
+/* components/content/BackTop/BackTop.wxss */
+.image{
+  background-color: #fff;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}

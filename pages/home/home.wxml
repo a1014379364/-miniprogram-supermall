@@ -1,0 +1,24 @@
+<!--pages/home/home.wxml-->
+<!--顶部轮播-->
+<home-swiper banners="{{banners}}"/>
+
+<!--推荐-->
+<recommends recommends="{{recommends}}" bind:imageLoad="getTop"/>
+
+<!--本周流行-->
+<view class="popular">
+  <view class="text">本周流行</view>
+  <image src="/assets/img/home/recommend_bg.jpg" mode="widthFix"></image>
+</view>
+
+<!--品类导航-->
+<tab-control titles="{{['流行','新款','精选']}}" bind:tabClick="handleTabClick"
+             class="{{isFixed ? 'tab-fixed' : ''}}" wx:if="{{isFixed}}"/>
+<tab-control titles="{{['流行','新款','精选']}}" bind:tabClick="handleTabClick"
+             id="tab-control"/>
+
+<!--商品展列-->
+<good-list goodList="{{goods[activeType].list}}"/>
+
+<!--回到顶部-->
+<back-top class="back-top" wx:if="{{showBackTop}}"/>

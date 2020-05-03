@@ -1,0 +1,4 @@
+<!--components/content/Goods/GoodList/GoodList.wxml-->
+<view class="good-list">
+  <good-list-item wx:for="{{goodList}}" wx:key="iid" goodItem="{{item}}" class="good-list-item"/>
+</view>

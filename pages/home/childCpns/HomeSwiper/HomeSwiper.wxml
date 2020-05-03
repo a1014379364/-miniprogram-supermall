@@ -1,0 +1,19 @@
+<!--pages/home/childCpns/HomeSwiper.wxml-->
+<view class="swiper">
+    <view class="page-body">
+        <view class="page-section page-section-spacing swiper">
+            <swiper indicator-dots
+                    autoplay
+                    interval="2000"
+                    duration="500"
+                    circular
+                    indicator-active-color="#ff5777">
+                <block wx:for="{{banners}}" wx:key="title">
+                    <swiper-item>
+                        <image mode="widthFix" src="{{item.image}}" ></image>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+    </view>
+</view>

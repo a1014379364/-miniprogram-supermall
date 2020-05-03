@@ -1,0 +1,47 @@
+/* components/content/goods/GoodListItem/GoodListItem.wxss */
+.image{
+  width: 100%;
+  border-radius: 16rpx;
+}
+
+.price,
+.collect,
+.collect-icon,
+.collect-text{
+  display: inline-block;
+}
+
+.price{
+  color: #ff5777;
+}
+
+.title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;/*规定段落中的文本不进行换行*/
+  color: #555;
+}
+
+.collect{
+  float: right;
+  color: #555;
+}
+
+.collect-icon{
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  top:5rpx;
+  margin-left: -2rpx;
+}
+
+/*.collect::before{*/
+/*  content:'';*/
+/*  position: absolute;*/
+/*  width: 14px;*/
+/*  height: 14px;*/
+/*  margin-left: -16px;*/
+/*  margin-top: 9rpx;*/
+/*  !*注意:wxss中无法引用本地图片*!*/
+/*  background: url("/assets/img/home/heart.png") 0 0/14px 14px;*/
+/*}*/

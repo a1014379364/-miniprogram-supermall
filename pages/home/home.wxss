@@ -1,0 +1,35 @@
+/* pages/home/home.wxss */
+/*============本周流行样式============*/
+.popular{
+  text-align: center;
+}
+
+.popular .text{
+  padding: 12px 0;
+  color: #555;
+  font-size: 40rpx;
+}
+
+/*============局部滑动组件样式=========*/
+.scroll{
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/*============回到顶部样式============*/
+.back-top{
+  position: fixed;
+  bottom: 0;
+  right: 36rpx;
+}
+
+/*============展列分类样式============*/
+.tab-fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 10;
+}

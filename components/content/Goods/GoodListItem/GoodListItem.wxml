@@ -1,0 +1,13 @@
+<!--components/content/goods/GoodListItem/GoodListItem.wxml-->
+<!--<text>{{goodItem.title}}</text>-->
+<view class="good-list-item">
+  <image src="{{goodItem.show.img}}" class="image" lazy-load></image>
+  <view class="good-info">
+    <view class="title">{{goodItem.title}}</view>
+    <text class="price">￥{{goodItem.price}}</text>
+    <view class="collect">
+      <image class="collect-icon" src="/assets/img/home/heart-outline.png"></image>
+      <text class="collect-text">{{goodItem.cfav}}</text>
+    </view>
+  </view>
+</view>

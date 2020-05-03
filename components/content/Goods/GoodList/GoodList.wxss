@@ -1,0 +1,12 @@
+/* components/content/Goods/GoodList/GoodList.wxss */
+.good-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /*padding: 2px;*/
+}
+
+.good-list .good-list-item{
+  width: 48%;
+  padding-bottom: 18rpx;
+}
