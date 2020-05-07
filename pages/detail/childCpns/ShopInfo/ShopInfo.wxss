@@ -1,0 +1,88 @@
+/* pages/detail/childCpns/ShopInfo/ShopInfo.wxss */
+.shop-info{
+  border-bottom: 30rpx solid #f6f6f6;
+}
+
+.shop-info .image{
+  width: 100rpx;
+  border: 1px solid #555;
+  border-radius: 50%;
+  margin: 48rpx;
+  padding: 12rpx;
+  vertical-align: middle;
+}
+
+.shop-info .name{
+  /*display: inline-block;*/
+  font-weight: 7px;
+}
+
+.middle{
+  display: flex;
+  padding-bottom: 30rpx;
+}
+
+.middle .left{
+  flex: 1;
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  border-right: 2px solid #f6f6f6;
+  margin: 40rpx 0;
+  right: -1px;
+}
+.middle .left .item{
+  flex: 1;
+  /*width: 50%;*/
+}
+
+.middle .right{
+  flex: 1;
+}
+
+.middle .right .item{
+  padding: 16rpx;
+  display: flex;
+}
+
+.middle .right .item .text{
+  flex: 1;
+  white-space: nowrap;
+  padding-left: 16rpx;
+  /*text-align: center;*/
+  /*padding-left:12rpx;*/
+}
+
+.bottom{
+  display: flex;
+}
+
+.bottom .btn{
+  /*flex: 1;*/
+  border: none;
+  margin-bottom: 30rpx;
+  background-color:rgba(106,150,177,.3) ;
+}
+
+.normal{
+  color:rgb(106,150,52);
+}
+.normalBg{
+  background-color:rgb(106,150,52);
+  color: #fff;
+  /*text-align: center;*/
+  /*margin: 0 10rpx;*/
+  /*border-radius: 50%;*/
+}
+
+.better{
+  color: rgb(252,105,85);
+}
+.betterBg{
+  background-color: rgb(252,105,85);
+  color: #fff;
+  /*text-align: center;*/
+  /*margin: 0 10rpx;*/
+  /*border-radius: 50%;*/
+}

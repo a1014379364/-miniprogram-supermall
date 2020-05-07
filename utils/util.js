@@ -14,6 +14,17 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+function debounce(func,delay=100){//防抖函数
+  let timer = null
+  return function (...args) {
+    if(timer) clearTimeout(timer)
+    timer = setTimeout(() => {
+      func.apply(this,args)
+    },delay)
+  }
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  debounce : debounce
 }

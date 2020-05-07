@@ -13,9 +13,9 @@
 
 <!--品类导航-->
 <tab-control titles="{{['流行','新款','精选']}}" bind:tabClick="handleTabClick"
-             class="{{isFixed ? 'tab-fixed' : ''}}" wx:if="{{isFixed}}"/>
+             class="{{isFixed ? 'tab-fixed' : ''}}" wx:if="{{isFixed}}" pageIndex = "{{activeIndex}}"/>
 <tab-control titles="{{['流行','新款','精选']}}" bind:tabClick="handleTabClick"
-             id="tab-control"/>
+             id="tab-control" pageIndex = "{{activeIndex}}"/>
 
 <!--商品展列-->
 <good-list goodList="{{goods[activeType].list}}"/>

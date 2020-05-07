@@ -1,1 +1,17 @@
 /* pages/detail/detail.wxss */
+.tab-control{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background-color: #fff;
+}
+
+.detail-swiper{
+  margin-top: 44px;
+}
+
+/*.bottom{*/
+/*  border-bottom: 44px solid #f6f6f6;*/
+/*}*/

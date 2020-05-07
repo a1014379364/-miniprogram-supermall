@@ -1,0 +1,37 @@
+/* pages/detail/childCpns/BottomControl/BottomControl.wxss */
+.bottom-control{
+  height: 44px;
+  line-height: 44px;
+  background-color: #fff;
+  font-size: 13px;
+  text-align: center;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+}
+
+.bottom-control .left,
+.bottom-control .right{
+  flex: 1;
+  display: flex;
+  /*align-items: center;*/
+  justify-content: space-evenly;
+}
+
+.bottom-control .right .add-cart{
+  background-color: rgb(255,232,23);
+}
+
+.bottom-control .right .buy{
+  color: #fff;
+  background-color: #ff5777;
+}
+
+.bottom-control .item{
+  flex: 1;
+  display: inline-block;
+}

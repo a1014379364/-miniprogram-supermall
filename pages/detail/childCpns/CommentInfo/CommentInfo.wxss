@@ -1,0 +1,35 @@
+/* pages/detail/childCpns/CommentInfo/CommentInfo.wxss */
+.comment-info{
+  margin: 0 40rpx;
+  border-bottom: 44px solid #f6f6f6;
+}
+
+.title{
+  padding: 30rpx 0;
+  border-bottom: 2px solid #f6f6f6;
+}
+.title .right{
+  float: right;
+}
+
+.user .image{
+  width: 114rpx;
+  vertical-align: middle;
+  margin: 30rpx 30rpx 30rpx 0;
+  border-radius: 50%;
+}
+
+.middle{
+  padding-bottom: 30rpx;
+}
+
+.bottom{
+  display: flex;
+  justify-content: space-evenly;
+  color: #555;
+  padding-bottom: 30rpx;
+}
+
+.bottom > .text{
+  flex: 1;
+}

@@ -16,7 +16,7 @@ Page({
       'sell':{page:0,list:[]}
     },
     activeType:'pop', //当前活跃的商品类别
-    // activeIndex:0,
+    activeIndex:0,
     showBackTop:false, //控制返回顶部显示
     isFixed:false,
     tabTop:0
@@ -78,12 +78,9 @@ Page({
         break
     }
     this.setData({
-      activeType:type
+      activeType:type,
+      activeIndex:event.detail
     })
-    //状态同步
-    // this.setData({
-    //   activeIndex:event.detail
-    // })
   },
   onReachBottom() {//刷新当前商品展列数据
     this._getHomeGoods(this.data.activeType)

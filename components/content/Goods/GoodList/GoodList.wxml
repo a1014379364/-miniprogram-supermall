@@ -1,4 +1,8 @@
 <!--components/content/Goods/GoodList/GoodList.wxml-->
 <view class="good-list">
-  <good-list-item wx:for="{{goodList}}" wx:key="iid" goodItem="{{item}}" class="good-list-item"/>
+  <good-list-item wx:for="{{goodList}}" wx:key="iid"
+                  goodItem="{{item}}"
+                  class="good-list-item"
+                  bind:tap="handlePushDetail"
+                  data-iid="{{item.iid ? item.iid : item.item_id}}"/>
 </view>

@@ -1,0 +1,9 @@
+<!--pages/detail/childCpns/Look/Look.wxml-->
+<view class="desc">{{detailInfo.desc}}</view>
+<view class="look">
+  <image class="image"
+         mode="widthFix"
+         wx:for="{{detailInfo.detailImage[0].list}}"
+         src="{{item}}" wx:key="*this" bind:load="loadImage">
+  </image>
+</view>

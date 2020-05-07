@@ -1,0 +1,22 @@
+/* pages/detail/ParamsInfo/ParamsInfo.wxss */
+.row{
+  display: flex;
+  padding: 20rpx 0;
+  margin: 0 40rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.col{
+  flex: 1;
+}
+.key{
+  flex: 1;
+}
+.value{
+  flex: 3;
+  color: #ff5777;
+}
+
+.info{
+  border-bottom: 30rpx solid #f6f6f6;
+}

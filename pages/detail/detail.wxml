@@ -1,2 +1,28 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<!--顶部导航-->
+<tab-control titles="{{['商品','参数','评论']}}" class="tab-control"
+             bind:tabClick="tabClick" pageIndex="{{pageIndex}}"/>
+
+<!--顶部轮播图-->
+<detail-swiper topImages = "{{topImages}}" class="detail-swiper"/>
+
+<!--商品信息-->
+<good-info goods="{{goods}}"/>
+
+<!--店铺信息-->
+<shop-info shop="{{shop}}"/>
+
+<!--穿着效果-->
+<look detailInfo="{{detailInfo}}" bind:imageLoad="getTop"/>
+
+<!--商品参数-->
+<params-info paramsInfo="{{paramsInfo}}" id="params-info"/>
+
+<!--用户评论-->
+<comment-info commentInfo="{{commentInfo}}" id="comment-info" class="bottom"/>
+
+<!--其他推荐-->
+<!--<good-list goodList="{{recommends}}"/>-->
+
+<!--底部导航-->
+<bottom-control />

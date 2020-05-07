@@ -1,0 +1,9 @@
+/* pages/detail/childCpns/Look/Look.wxss */
+.desc{
+  padding: 30rpx;
+  border: 2px solid #ff5777;
+  border-radius: 10rpx;
+}
+.look{
+  border-bottom:30rpx solid #f6f6f6 ;
+}

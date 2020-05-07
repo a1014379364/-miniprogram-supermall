@@ -1,4 +1,16 @@
 {
-  "usingComponents": {},
+  "component": true,
+  "usingComponents": {
+    "detail-swiper" : "./childCpns/DetailSwiper/DetailSwiper",
+    "good-info" : "./childCpns/GoodInfo/GoodInfo",
+    "shop-info" : "./childCpns/ShopInfo/ShopInfo",
+    "look" : "./childCpns/Look/Look",
+    "params-info" : "./childCpns/ParamsInfo/ParamsInfo",
+    "comment-info" : "./childCpns/CommentInfo/CommentInfo",
+    "bottom-control" : "./childCpns/BottomControl/BottomControl",
+
+    "good-list" : "/components/content/Goods/GoodList/GoodList",
+    "tab-control" : "/components/content/TabControl/TabControl"
+  },
   "navigationBarTitleText": "详情页"
 }

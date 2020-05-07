@@ -1,0 +1,68 @@
+/* pages/detail/childCpns/GoodInfo/GoodInfo.wxss */
+.good-info{
+  border-bottom: 30rpx solid #f6f6f6;
+}
+
+.title{
+  padding: 20rpx 0;
+  font-size: 34rpx;
+  font-weight: bold;
+  text-indent: 20rpx;
+}
+.all-price{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  text-indent: 20rpx;
+}
+.new-price{
+  flex: 1;
+  color: #ff5777;
+}
+.old-price{
+  flex: 1;
+  text-decoration:line-through;
+  color: #ccc;
+}
+.discount{
+  flex: 1;
+  color: #fff;
+  background-color: rgb(241, 62, 58);
+  border-radius: 30rpx;
+  margin: 10rpx 70rpx 0 70rpx ;
+  font-size: 30rpx;
+}
+.info-other{
+  display: flex;
+  padding: 48rpx 0 16rpx;
+  border-bottom: 2px solid #f6f6f6;
+}
+.text{
+  flex: 1;
+  text-align: center;
+  color: #555;
+  font-size: 32rpx;
+}
+
+.info-service{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 28rpx 0;
+  text-indent: 20rpx;
+}
+
+.info-service-item{
+  padding-right: 32rpx;
+  display: inline-block;
+}
+/*.info-service-item{*/
+/*  height: 28rpx;*/
+/*}*/
+.info-service-item .image{
+  width: 32rpx;
+}
+.info-service-item .text{
+  /*display: inline-block;*/
+  font-size: 32rpx;
+  white-space:nowrap;
+}

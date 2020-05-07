@@ -1,0 +1,4 @@
+/* pages/detail/childCpns/DetailSwiper/DetailSwiper.wxss */
+.swiper{
+  height: 500rpx;
+}

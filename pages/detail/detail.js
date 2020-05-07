@@ -1,66 +1,115 @@
 // pages/detail/detail.js
+import {
+  getDetail,
+  Goods,
+  Shop,
+  GoodsParams,
+  getRecommend
+} from "../../service/detail.js";
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    iid:'',
+    topImages:[],
+    goods:{},
+    shop:{},
+    detailInfo:{},
+    paramsInfo:{},
+    commentInfo:{},
+    recommends:{},
+    paramsTop:0,
+    commentTop:0,
+    pageIndex:0
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
+    const iid = options.iid
+
+    //请求相关数据
+    getDetail(iid).then(res =>{
+      const data = res.data.result
+      const goods = new Goods(data.itemInfo,data.columns,data.shopInfo.services)
+      const shop = new Shop(data.shopInfo)
+      const detailInfo = data.detailInfo
+      const paramsInfo = new GoodsParams(data.itemParams.info,data.itemParams.rule)
+      let  commentInfo = {}
+      if(data.rate.cRate !== 0){
+        commentInfo = data.rate.list[0]
+      }
+
+      this.setData({
+        iid, //保留传递过来的iid
+        topImages : data.itemInfo.topImages,//获取顶部的图片轮播数据
+        goods,//商品数据
+        shop,//店铺数据
+        detailInfo,//穿着效果
+        paramsInfo,//参数数据
+        commentInfo //用户评论
+      })
+    })
+    getRecommend().then(res => {
+      const recommends = res.data.data.list
+      this.setData({
+        recommends //相关推荐
+      })
+    })
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  getTop(){
+    wx.createSelectorQuery().select('#params-info').boundingClientRect(rect => {
+      const paramsTop = rect.top
+      this.setData({
+        paramsTop //获取参数位置
+      })
+    }).exec()
+    wx.createSelectorQuery().select('#comment-info').boundingClientRect(rect => {
+      const commentTop = rect.top
+      this.setData({
+        commentTop //获取评论位置
+      })
+    }).exec()
   },
+  tabClick(options){
+    const activeIndex = options.detail
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+    //移动屏幕
+    switch (activeIndex) {
+      case 0 :
+        this.backTop(0)
+        break
+      case 1 :
+        this.backTop(this.data.paramsTop - 44)
+        break
+      case 2 :
+        this.backTop(this.data.commentTop - 44)
+        break
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  backTop(scrollTop){
+    wx.pageScrollTo({
+      scrollTop
+    })
   },
+  onPageScroll(options) {
+    const scrollTop = options.scrollTop
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+    if(0 <= scrollTop && scrollTop < this.data.paramsTop - 44 && this.data.pageIndex !== 0){//商品
+      this.setData({
+        pageIndex : 0
+      })
+    }else if (this.data.paramsTop - 44 <= scrollTop && scrollTop < this.data.commentTop - 44 && this.data.pageIndex !== 1){//参数
+      this.setData({
+        pageIndex : 1
+      })
+    }else if(this.data.commentTop - 44 <= scrollTop && scrollTop < Number.MAX_VALUE && this.data.pageIndex !== 2){
+      this.setData({
+        pageIndex : 2
+      })
+    }
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (options) {
+    return{
+      title:this.data.goods.title,
+      path:'/pages/detail/detail?' + this.data.iid
+    }
   }
 })

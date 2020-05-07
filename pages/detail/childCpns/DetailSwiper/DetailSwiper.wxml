@@ -1,0 +1,20 @@
+<!--pages/detail/childCpns/DetailSwiper/DetailSwiper.wxml-->
+<view class="swiper">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots
+              autoplay
+              interval="2000"
+              duration="500"
+              circular
+              indicator-active-color="#ff5777"
+              class="swiper">
+        <block wx:for="{{topImages}}" wx:key="*this">
+          <swiper-item>
+            <image mode="widthFix" src="{{item}}" ></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+</view>

@@ -8,5 +8,13 @@ Component({
       type:Array,
       value:[]
     }
+  },
+  methods:{
+    handlePushDetail(event){
+      const iid = event.currentTarget.dataset.iid
+      wx.navigateTo({
+        url:'/pages/detail/detail?iid='+iid
+      })
+    }
   }
 })
