@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "分类"
+  "component": true,
+  "usingComponents": {
+    "left-control" : "./childCpns/LeftControl/LeftControl",
+    "goods-type" : "./childCpns/GoodsType/GoodsType"
+  },
+  "navigationBarTitleText": "商品分类"
 }
