@@ -1,66 +1,32 @@
 // pages/cart/cart.js
+const app = getApp()
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  data:{
+    cartList:{},
+    isAll:false,
+    selected:false
   },
+  onShow() {
+    this.setData({
+      cartList:app.globalData.cartList
+    })
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+    //修改顶部标题
+    wx.setNavigationBarTitle({
+      title: '购物车[' + this.data.cartList.length + ']'
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  listClick(options){
+    this.setData({
+      isAll: options.detail.isAll
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  selectClick(options){
+    const selected = options.detail.isAll //需要实现的状态
+    this.setData({
+      isAll: selected, //更改全选高亮状态
+      selected
+    })
   }
 })

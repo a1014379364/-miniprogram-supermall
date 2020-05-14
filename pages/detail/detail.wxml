@@ -25,4 +25,4 @@
 <!--<good-list goodList="{{recommends}}"/>-->
 
 <!--底部导航-->
-<bottom-control />
+<bottom-control product="{{product}}"/>

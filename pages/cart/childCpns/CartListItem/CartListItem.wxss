@@ -1,0 +1,57 @@
+/* pages/cart/childCpns/CartListItem/CartListItem.wxss */
+.item{
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.item .icon{
+  background-color: #bfbfbf;
+  border-radius: 50%;
+  width: 48rpx;
+  /*height: 48rpx;*/
+  vertical-align: middle;
+  margin: 0 8px;
+}
+
+.item .active{
+  background-color: #ff5777;
+}
+
+.item .image{
+  width: 160rpx;
+  vertical-align: middle;
+  border-radius: 10rpx;
+  margin-right: 8px;
+}
+
+.item .info{
+  width: 60%;
+  align-self: normal;
+}
+
+.item .text{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;/*规定段落中的文本不进行换行*/
+  padding-bottom: 12px;
+}
+
+.item .info .title{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.item .info .desc{
+  font-size: 13px;
+  color: #555;
+}
+
+.item .price .in-price{
+  color: #ff5777;
+}
+
+.item .count{
+  float: right;
+}

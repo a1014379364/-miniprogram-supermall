@@ -1,23 +1,23 @@
 // pages/detail/childCpns/BottomControl/BottomControl.js
+const app = getApp()
+
 Component({
-  /**
-   * 组件的属性列表
-   */
-  properties: {
-
+  properties:{
+    product:{
+      type:Object,
+      value:{}
+    }
   },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
+    handlerAdd(){
+      const isNew = app.globalData.addProduct(this.data.product)
+      const title = isNew ? '已添加新商品' : '商品数量加一'
 
+      wx.showToast({
+        title,
+        icon: 'success',
+        duration: 1000
+      })
+    }
   }
 })

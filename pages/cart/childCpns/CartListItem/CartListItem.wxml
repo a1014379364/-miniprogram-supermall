@@ -1,0 +1,15 @@
+<!--pages/cart/childCpns/CartListItem/CartListItem.wxml-->
+<view class="item">
+  <image class="dis icon {{isActive ? 'active' : ''}}"
+         src="/assets/img/cart/tick.png" mode="widthFix" bind:tap="handleClick"></image>
+  <image class="dis image" src="{{product.image}}" mode="widthFix"></image>
+  <view class="dis info">
+    <view class="text title">{{product.title}}</view>
+    <view class="text desc">{{product.desc}}</view>
+    <view class="price">
+      <text class="in-price">￥{{product.price}}</text>
+      <text class="count">x{{product.count}}</text>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,8 @@
+<!--pages/cart/childCpns/CartList/CartList.wxml-->
+<view class="cart-list">
+  <cart-list-item wx:for="{{cartList}}"
+                  wx:key="iid"
+                  product="{{item}}"
+                  bind:itemClick="checkClick"
+                  data-index="{{index}}"/>
+</view>

@@ -1,0 +1,5 @@
+/* pages/cart/childCpns/CartList/CartList.wxss */
+.cart-list{
+  /*border-bottom: 44px soild #fff;*/
+  margin-bottom: 44px;
+}

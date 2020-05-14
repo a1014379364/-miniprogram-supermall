@@ -1,0 +1,45 @@
+.bottom-control{
+  display: flex;
+  height: 44px;
+  line-height: 44px;
+  background-color: #f6f6f6;
+  font-size: 14px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.check{
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+}
+
+.check .icon{
+  margin: 0 8px;
+  border-radius: 50%;
+  width: 48rpx;
+  background-color: #bfbfbf;
+}
+
+.check .active{
+  background-color: #ff5777;
+}
+
+.check .text{
+  color: #ccc;
+}
+.check .activeText{
+  color: #ff5777;
+}
+
+.compute{
+  background-color: rgb(255,67,0);
+  padding: 0 14px;
+  color: #fff;
+
+  position: absolute;
+  right: 0;
+}

@@ -1,0 +1,15 @@
+<!--pages/cart/childCpns/BottomControl/BottomControl.wxml-->
+<view class="bottom-control">
+  <view class="check" bind:tap="checkClick">
+    <image src="/assets/img/cart/tick.png" mode="widthFix"
+           class="icon {{isAll ? 'active' : ''}}">
+    </image>
+    <text class="text {{isAll ? 'activeText' : ''}}">全选</text>
+  </view>
+  <view class="sum">
+    合计: 108.00
+  </view>
+  <view class="compute">
+    去计算(2)
+  </view>
+</view>

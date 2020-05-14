@@ -19,7 +19,8 @@ Page({
     recommends:{},
     paramsTop:0,
     commentTop:0,
-    pageIndex:0
+    pageIndex:0,
+    product:{}
   },
   onLoad: function (options) {
     const iid = options.iid
@@ -45,6 +46,9 @@ Page({
         paramsInfo,//参数数据
         commentInfo //用户评论
       })
+
+      //汇总购物车信息
+      this.getProduct()
     })
     getRecommend().then(res => {
       const recommends = res.data.data.list
@@ -52,7 +56,18 @@ Page({
         recommends //相关推荐
       })
     })
+  },
+  getProduct(){
+    const product = {}
+    product.image = this.data.topImages[0]
+    product.title = this.data.goods.title
+    product.desc = this.data.goods.desc
+    product.price = this.data.goods.realPrice
+    product.iid = this.data.iid
 
+    this.setData({
+      product
+    })
   },
   getTop(){
     wx.createSelectorQuery().select('#params-info').boundingClientRect(rect => {
